@@ -5,7 +5,7 @@
     <tr>
         <td>
             <?php
-            rand(1,100);
+            echo rand(1,100);
             ?>
         </td>
     </tr>
