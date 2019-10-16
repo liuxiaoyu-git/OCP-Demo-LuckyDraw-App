@@ -6,10 +6,12 @@
         <td align="center"><font size="10" color="#FFFF00">您的抽奖序号是</td>
     </tr>
     <tr>
-        <td align="center"><font size="10" color="#FFFF00">
+        <td align="center">
+            <font size="10" color="#FF00FF">
             <?php
             echo rand(10,99);
             ?>
+            </font>
         </td>
     </tr>
 </table>
