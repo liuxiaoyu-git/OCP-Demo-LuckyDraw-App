@@ -1,12 +1,12 @@
 <?php
-echo session_status();
+echo "session_status1="+session_status();
 session_start();
-echo "-after-";
-echo session_status();
-echo $_SESSION["currentLoop"];
+echo "<br>session_status2="+session_status();
+echo "
+echo "<br>currentLoop1="+$_SESSION["currentLoop"];
 $currentLoop=(int)$_SESSION["currentLoop"];
 $_SESSION["currentLoop"] =$currentLoop+1;
-echo $_SESSION["currentLoop"];
+echo "<br>currentLoop2="+$_SESSION["currentLoop"];
 
 //$_SESSION["currentLoop"] = 1;
 //$_SESSION["win"] = false;
