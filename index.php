@@ -3,6 +3,10 @@ echo session_status();
 session_start();
 echo "-after-";
 echo session_status();
+echo $_SESSION["currentLoop"];
+$currentLoop=(int)$_SESSION["currentLoop"];
+$_SESSION["currentLoop"] =$currentLoop+1;
+echo $_SESSION["currentLoop"];
 
 //$_SESSION["currentLoop"] = 1;
 //$_SESSION["win"] = false;
