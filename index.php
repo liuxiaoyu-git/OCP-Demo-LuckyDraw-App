@@ -1,11 +1,7 @@
 <?php
-echo "<br>empty(session_status())=".empty(session_status());
-echo "<br>null==session_status())=".(null==session_status());
-echo "<br>session_status1=".session_status();
+if(session_status() !== PHP_SESSION_ACTIVE)
+    session_start();
 
-//if (session_status()==1 || session_status()==
-session_start();
-echo "<br>session_status2=".session_status();
 echo "<br>currentLoop1=".$_SESSION["currentLoop"];
 $currentLoop=(int)$_SESSION["currentLoop"];
 $_SESSION["currentLoop"]=$currentLoop+1;
