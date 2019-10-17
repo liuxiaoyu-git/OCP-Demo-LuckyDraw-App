@@ -5,9 +5,9 @@ echo "<br>3=".(NULL==session_status());
 echo "<br>4=".(session_status() === PHP_SESSION_NONE);
 echo "<br>5=".(session_status() == PHP_SESSION_NONE);
 echo "<br>6=";
-echo session_status() === PHP_SESSION_ACTIVE ? TRUE : FALSE;
+echo session_status() == 1 ? TRUE : FALSE;
 
-if (session_status() === PHP_SESSION_NONE){
+if (session_status() == 1){
     echo "<br>start session...";
     session_start();
     echo "<br>session_status=";
