@@ -1,4 +1,5 @@
 <?php
+/*
 echo "<br>1=".session_status();
 echo "<br>2=".(is_null(session_status()));
 echo "<br>3=".(NULL==session_status());
@@ -10,32 +11,21 @@ echo session_status() == 1 ? TRUE : FALSE;
 if (session_id() === "") echo "<br>7=session_id() is empty";
 if (session_status() == 1) echo "<br>8=session_status() == 1";
 if (session_status() === 1) echo "<br>9=session_status() === 1";
-
-if (session_id() === ""){
-    echo "<br>start session...";
+*/
+if (session_status() !== PHP_SESSION_ACTIVE) {
+    //echo "<br>start session...";
     session_start();
-    echo "<br>session_status=";
-    echo session_status();
-    if (session_id() === "") echo "<br>10=session_id() is empty";
-    if (session_status() == 1) echo "<br>11=session_status() == 1";
-    if (session_status() === 1) echo "<br>12=session_status() === 1";
-    echo "<br>";
-    $_SESSION["winTimes"] = 0;
-    //$_SESSION["currentLoop"] =1;
 }
 
-echo "<br>currentLoop1=".$_SESSION["currentLoop"];
-$currentLoop=(int)$_SESSION["currentLoop"];
-$_SESSION["currentLoop"]=$currentLoop+1;
-echo "<br>currentLoop2=".$_SESSION["currentLoop"];
+//echo "<br>currentLoop1=".$_SESSION["currentLoop"];
+$currentLoop=(int) $_SESSION["currentLoop"];
+$_SESSION["currentLoop"]=$currentLoop+1;    
 
-//$_SESSION["currentLoop"] = 1;
-//$_SESSION["win"] = false;
 ?>
 <html>
     <head>
         <?php
-            if ($currentLoop <= 10)
+            if ($currentLoop < 10)
                 echo "<meta http-equiv=\"refresh\" content=\"2\">";
         ?>
     </head>
@@ -66,9 +56,10 @@ echo "<br>currentLoop2=".$_SESSION["currentLoop"];
             <tr>
                 <td align="center"><font size="10" color="#FF0000">
                     <?php
-                        if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99)
-                            echo "恭喜你，中奖了！";
-                        else
+                        if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
+                            echo "恭喜你，刚刚中奖了！";
+                            $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
+                        } else
                             echo "这没中奖，还可以再来一次！";
                     ?>
                 </td>
@@ -78,7 +69,7 @@ echo "<br>currentLoop2=".$_SESSION["currentLoop"];
             ?>
             <tr>
                 <td align="center">
-                    <font size="10" color="#FF00FF">您的抽奖记录是：</font>
+                    <font size="10" color="#FF00FF">你总共中了<?=$_SESSION["winTimes"]?>奖！</font>
                 </td>
             </tr>            
             <?php
