@@ -58,10 +58,10 @@ $_SESSION["currentLoop"]=$currentLoop;
                 <td align="center">
                     <?php
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
-                            echo "<br><img src="smile.png"><br><font size=\"20\" color=\"#FF1111\"><b>恭喜你，刚刚中奖了！</b></font>";
+                            echo "<br><img src=\"smile.png\"><br><font size=\"20\" color=\"#FF1111\"><b>恭喜你，刚刚中奖了！</b></font>";
                             $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
                         } else
-                            echo "<br><img src="cry.png"><br><font size=\"20\" color=\"#FF1111\"><b><br>这没中奖，还可以再来一次！</b></font>";
+                            echo "<br><img src=\"cry.png\"><br><font size=\"20\" color=\"#FF1111\"><b><br>这没中奖，还可以再来一次！</b></font>";
                     ?>
                 </td>
             </tr>
