@@ -7,6 +7,7 @@ echo "<br>5=".(session_status() == PHP_SESSION_NONE);
 if (session_status() === 1){
     echo "<br>start session...";
     session_start();
+    echo "<br>".session_status()；
     $_SESSION["winTimes"] = 0;
     $_SESSION["currentLoop"] =1;
 }
