@@ -1,6 +1,4 @@
 <?php
-echo (session_status() != PHP_SESSION_ACTIVE);
-echo (issession_status());
 
 if(session_status() == PHP_SESSION_NONE){
     session_start();
