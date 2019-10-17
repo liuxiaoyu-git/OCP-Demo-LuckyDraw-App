@@ -1,6 +1,6 @@
 <?php
 echo "<br>empty(session_status())=".empty(session_status());
-echo "<br>isset(session_status())=".isset(session_status());
+echo "<br>null==session_status())=".(null==session_status());
 echo "<br>session_status1=".session_status();
 
 //if (session_status()==1 || session_status()==
