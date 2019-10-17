@@ -34,20 +34,20 @@ $_SESSION["currentLoop"]=$currentLoop;
         <div id="box">
         <table width="100%" height="100%">
             <tr>
-                <td align="center"><font size="16" color="#FF0000"><b><br>欢迎参加Red Hat会议</b></font></td>
+                <td align="center"><font size="16" color="#FF0000"><b>欢迎参加Red Hat会议</b></font></td>
             </tr>
             <?php
                 if ($currentLoop <=10) {
             ?>
             <tr>
-                <td align="center"><font size="16" color="#FF0011"><br>这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
+                <td align="center"><font size="16" color="#FF0011">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
             </tr>
             <tr>
-                <td align="center"><font size="20" color="#FF1100"><br>本次您的抽奖序号是</td>
+                <td align="center"><font size="20" color="#FF1100">本次您的抽奖序号是</td>
             </tr>
             <tr>
                 <td align="center">
-                    <font size="10" color="#FF00FF"><br>
+                    <font size="10" color="#FF00FF">
                     <?php
                         $result=rand(10,99);
                         echo $result;
@@ -59,10 +59,10 @@ $_SESSION["currentLoop"]=$currentLoop;
                 <td align="center">
                     <?php
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
-                            echo "<br><img src=\"smile.png\"><br><font size=\"20\" color=\"#FF1111\"><b>恭喜你，刚刚中奖了！</b></font>";
+                            echo "<img src=\"smile.png\"><br><font size=\"20\" color=\"#FF1111\"><b>恭喜你，刚刚中奖了！</b></font>";
                             $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
                         } else
-                            echo "<br><img src=\"cry.png\"><br><font size=\"20\" color=\"#FF1111\"><b><br>这没中奖，还可以再来一次！</b></font>";
+                            echo "<img src=\"cry.png\"><br><font size=\"20\" color=\"#FF1111\"><b><br>这没中奖，还可以再来一次！</b></font>";
                     ?>
                 </td>
             </tr>
@@ -71,7 +71,7 @@ $_SESSION["currentLoop"]=$currentLoop;
             ?>
             <tr>
                 <td align="center">
-                    <font size="20" color="#FF11FF"><br>你总共中了 <b><?=$_SESSION["winTimes"]?></b> 次奖！</font>
+                    <font size="20" color="#FF11FF">你总共中了 <b><?=$_SESSION["winTimes"]?></b> 次奖！</font>
                 </td>
             </tr>            
             <?php
