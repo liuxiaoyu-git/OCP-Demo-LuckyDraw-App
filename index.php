@@ -32,16 +32,16 @@ $_SESSION["currentLoop"]=$currentLoop;
     <body>
         <table width=100%>
             <tr>
-                <td align="center"><font size="6" color="#FF0000">欢迎参加Red Hat会议</font></td>
+                <td align="center"><font size="16" color="#FF0000"><b>欢迎参加Red Hat会议</b></font></td>
             </tr>
             <?php
                 if ($currentLoop <=10) {
             ?>
             <tr>
-                <td align="center"><font size="6" color="#FF0000">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
+                <td align="center"><font size="16" color="#FF0000">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
             </tr>
             <tr>
-                <td align="center"><font size="10" color="#FF0000">本次您的抽奖序号是</td>
+                <td align="center"><font size="20" color="#FF0000">本次您的抽奖序号是</td>
             </tr>
             <tr>
                 <td align="center">
@@ -54,14 +54,16 @@ $_SESSION["currentLoop"]=$currentLoop;
                 </td>
             </tr>
             <tr>
-                <td align="center"><font size="10" color="#FF0000">
-                    <?php
-                        if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
-                            echo "恭喜你，刚刚中奖了！";
-                            $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
-                        } else
-                            echo "这没中奖，还可以再来一次！";
-                    ?>
+                <td align="center">
+                    <font size="20" color="#FF0000"><b>
+                        <?php
+                            if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
+                                echo "恭喜你，刚刚中奖了！";
+                                $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
+                            } else
+                                echo "这没中奖，还可以再来一次！";
+                        ?>
+                    </b></font>
                 </td>
             </tr>
             <?php
@@ -69,7 +71,7 @@ $_SESSION["currentLoop"]=$currentLoop;
             ?>
             <tr>
                 <td align="center">
-                    <font size="10" color="#FF00FF">你总共中了<?=$_SESSION["winTimes"]?>奖！</font>
+                    <font size="20" color="#FF11FF">你总共中了<br><?=$_SESSION["winTimes"]?></b>奖！</font>
                 </td>
             </tr>            
             <?php
