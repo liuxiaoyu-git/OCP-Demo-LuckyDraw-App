@@ -21,7 +21,7 @@ if (session_id() === ""){
     if (session_status() === 1) echo "<br>12=session_status() === 1";
     echo "<br>";
     $_SESSION["winTimes"] = 0;
-    $_SESSION["currentLoop"] =1;
+    //$_SESSION["currentLoop"] =1;
 }
 
 echo "<br>currentLoop1=".$_SESSION["currentLoop"];
