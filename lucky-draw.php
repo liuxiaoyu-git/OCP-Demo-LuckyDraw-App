@@ -31,7 +31,8 @@ $_SESSION["currentLoop"]=$currentLoop;
         ?>
     </head>
     <body>
-        <table width=100%>
+        <div id="box">
+        <table width="100%" height="100%">
             <tr>
                 <td align="center"><font size="16" color="#FF0000"><b><br>欢迎参加Red Hat会议</b></font></td>
             </tr>
@@ -77,5 +78,6 @@ $_SESSION["currentLoop"]=$currentLoop;
                 }
             ?>
         </table>
+        </div>
     </body>
 </html>
