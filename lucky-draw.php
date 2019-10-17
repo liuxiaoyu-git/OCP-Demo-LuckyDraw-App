@@ -47,7 +47,7 @@ $_SESSION["currentLoop"]=$currentLoop;
             </tr>
             <tr>
                 <td align="center">
-                    <font size="10" color="#FF00FF">
+                    <font size="20" color="#FF00FF">
                     <?php
                         $result=rand(10,99);
                         echo $result;
