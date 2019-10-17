@@ -11,7 +11,7 @@ if (session_id() === "") echo "<br>7=session_id() is empty";
 if (session_status() == 1) echo "<br>8=session_status() == 1";
 if (session_status() === 1) echo "<br>9=session_status() === 1";
 
-if (session_status() == 1){
+if (session_id() === ""){
     echo "<br>start session...";
     session_start();
     echo "<br>session_status=";
