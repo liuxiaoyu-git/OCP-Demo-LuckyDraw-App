@@ -1,6 +1,8 @@
 <?php
+echo (session_status() != PHP_SESSION_ACTIVE);
+echo (issession_status());
 
-if(session_status() !== PHP_SESSION_ACTIVE){
+if(session_status() == PHP_SESSION_NONE){
     session_start();
     $_SESSION["winTimes"] = 0;
     $_SESSION["currentLoop"] =1;
