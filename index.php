@@ -4,11 +4,11 @@ echo "<br>2=".(is_null(session_status()));
 echo "<br>3=".(NULL==session_status());
 echo "<br>4=".(session_status() === PHP_SESSION_NONE);
 echo "<br>5=".(session_status() == PHP_SESSION_NONE);
-if (session_status() !== 2){
+if (session_status !== 2){
     echo "<br>start session...";
     session_start();
     echo "<br>session_status=";
-    echo session_status();
+    echo session_status;
     echo "<br>";
     $_SESSION["winTimes"] = 0;
     $_SESSION["currentLoop"] =1;
