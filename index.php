@@ -1,3 +1,6 @@
+<?php
+static $count;
+?>
 <html>
 <div id="box">
     <table width="100%" height="100%">
