@@ -12,10 +12,11 @@ if (session_id() === "") echo "<br>7=session_id() is empty";
 if (session_status() == 1) echo "<br>8=session_status() == 1";
 if (session_status() === 1) echo "<br>9=session_status() === 1";
 */
+echo $attendanceAccount;
 if (session_status() !== PHP_SESSION_ACTIVE) {
     //echo "<br>start session...";
     session_start();
-    echo ++$count;
+    echo ++$attendanceAccount;
     $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
 }
 
@@ -60,7 +61,7 @@ $_SESSION["currentLoop"]=$currentLoop;
                 <td align="center">
                     <?php
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
-                            echo "<img src=\"smile.png\"><font size=\"20\" color=\"#FF1111\"><b>恭喜你，刚刚中奖了！</b></font>";
+                            echo "<img src=\"smile.png\"><font size=\"20\" color=\"#FF1111\"><b><br>恭喜你，刚刚中奖了！</b></font>";
                             $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
                         } else
                             echo "<img src=\"cry.png\"><font size=\"20\" color=\"#FF1111\"><b><br>这没中奖，还可以再来一次！</b></font>";
