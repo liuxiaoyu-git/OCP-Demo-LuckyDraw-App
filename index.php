@@ -18,14 +18,14 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 //echo "<br>currentLoop1=".$_SESSION["currentLoop"];
-$currentLoop=(int) $_SESSION["currentLoop"];
-$_SESSION["currentLoop"]=$currentLoop+1;    
+$currentLoop=(int) $_SESSION["currentLoop"] + 1;
+$_SESSION["currentLoop"]=$currentLoop;    
 
 ?>
 <html>
     <head>
         <?php
-            if ($currentLoop < 10)
+            if ($currentLoop <= 10)
                 echo "<meta http-equiv=\"refresh\" content=\"2\">";
         ?>
     </head>
@@ -34,12 +34,12 @@ $_SESSION["currentLoop"]=$currentLoop+1;
             <tr>
                 <td align="center"><font size="6" color="#FF0000">欢迎参加Red Hat会议</font></td>
             </tr>
-            <tr>
-                <td align="center"><font size="6" color="#FF0000">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
-            </tr>
             <?php
                 if ($currentLoop <=10) {
             ?>
+            <tr>
+                <td align="center"><font size="6" color="#FF0000">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
+            </tr>
             <tr>
                 <td align="center"><font size="10" color="#FF0000">本次您的抽奖序号是</td>
             </tr>
