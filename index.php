@@ -13,7 +13,7 @@ echo "<br>currentLoop2=".$_SESSION["currentLoop"];
 <html>
     <head>
         <?php
-            if ($currentLoop == 10)
+            if ($currentLoop <= 10)
                 echo "<meta http-equiv=\"refresh\" content=\"2\">";
         ?>
     </head>
@@ -23,7 +23,7 @@ echo "<br>currentLoop2=".$_SESSION["currentLoop"];
                 <td align="center"><font size="6" color="#FF0000">欢迎参加Red Hat会议</font></td>
             </tr>
             <tr>
-                <td align="center"><font size="6" color="#FF0000">这是您的<?=$currentLoo?>第抽奖</font></td>
+                <td align="center"><font size="6" color="#FF0000">这是您的<?=$currentLoop?>第抽奖</font></td>
             </tr>
             <tr>
                 <td align="center"><font size="10" color="#FFFF00">您的抽奖序号是</td>
