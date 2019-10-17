@@ -78,4 +78,4 @@ $_SESSION["currentLoop"]=$currentLoop;
             ?>
         </table>
     </body>
-<html>
+</html>
