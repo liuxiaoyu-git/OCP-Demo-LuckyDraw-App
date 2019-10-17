@@ -12,11 +12,9 @@ if (session_id() === "") echo "<br>7=session_id() is empty";
 if (session_status() == 1) echo "<br>8=session_status() == 1";
 if (session_status() === 1) echo "<br>9=session_status() === 1";
 */
-global $attendanceAccount;
 if (session_status() !== PHP_SESSION_ACTIVE) {
-    echo "<br>start session...";
+    //echo "<br>start session...";
     session_start();
-    echo ++$attendanceAccount;
     $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
 }
 
