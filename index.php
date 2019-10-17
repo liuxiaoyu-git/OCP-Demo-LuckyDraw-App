@@ -1,7 +1,7 @@
 <?php
 echo "session_status1=".session_status();
 session_start();
-echo "<br>session_status2=".session_tatus();
+echo "<br>session_status2=".session_status();
 echo "<br>currentLoop1=".$_SESSION["currentLoop"];
 $currentLoop=(int)$_SESSION["currentLoop"];
 $_SESSION["currentLoop"]=$currentLoop+1;
