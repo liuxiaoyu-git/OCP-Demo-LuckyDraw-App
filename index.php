@@ -7,6 +7,10 @@ echo "<br>5=".(session_status() == PHP_SESSION_NONE);
 echo "<br>6=";
 echo session_status() == 1 ? TRUE : FALSE;
 
+if (session_id() === "") echo "<br>7=session_id() is empty";
+if (session_status() == 1) echo "<br>8=session_status() == 1";
+if (session_status() === 1) echo "<br>9=session_status() === 1";
+
 if (session_status() == 1){
     echo "<br>start session...";
     session_start();
