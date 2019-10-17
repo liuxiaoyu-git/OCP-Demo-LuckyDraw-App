@@ -16,6 +16,9 @@ if (session_status() == 1){
     session_start();
     echo "<br>session_status=";
     echo session_status();
+    if (session_id() === "") echo "<br>10=session_id() is empty";
+    if (session_status() == 1) echo "<br>11=session_status() == 1";
+    if (session_status() === 1) echo "<br>12=session_status() === 1";
     echo "<br>";
     $_SESSION["winTimes"] = 0;
     $_SESSION["currentLoop"] =1;
