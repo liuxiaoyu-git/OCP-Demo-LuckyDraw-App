@@ -20,10 +20,11 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
             <tr>
                 <td align="center"><font size="16" color="#FF0000"><b>欢迎参加Red Hat会议</b></font></td>
             </tr>
-				<?php
-					if ($currentLoop <= $totalTime) {
-						$result=rand(10,99);
-				?>
+		<?php
+		if ($currentLoop <= $totalTime) {
+			$currentLoop=$currentLoop+1;
+			$result=rand(10,99);
+		?>
             <tr>
                 <td align="center"><font size="16" color="#FF0011">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=($totalTime-$currentLoop)?>次</font></td>
             </tr>
