@@ -1,8 +1,10 @@
 <?php
 $totalTime=10;
 
-if (session_status() !== PHP_SESSION_ACTIVE) 
+if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
+    $currentLoop=1;
+}
 else
     $currentLoop=(int) $_SESSION["currentLoop"] + 1;
 ?>
