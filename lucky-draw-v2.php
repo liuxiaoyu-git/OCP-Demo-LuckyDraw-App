@@ -1,14 +1,10 @@
 <?php
 $totalTime=10;
 
-if (session_status() !== PHP_SESSION_ACTIVE) {
-    //echo "<br>start session...";
+if (session_status() !== PHP_SESSION_ACTIVE) 
     session_start();
-    //$_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
-}
 else
     $currentLoop=(int) $_SESSION["currentLoop"] + 1;
-
 ?>
 <html>
     <head>
@@ -55,8 +51,9 @@ else
             </tr>
             <?php
                 } else {
-                    $currentLoop=$totalTime;
-                    $_SESSION["currentLoop"]=$totalTime; 
+                    $currentLoop=$totalTime+1;
+                    $_SESSION["currentLoop"]=$currentLoop; 
+				}
             ?>
             <tr>
                 <td align="center">
