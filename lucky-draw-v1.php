@@ -13,7 +13,7 @@ $_SESSION["currentLoop"]=$currentLoop;
 <html>
     <head>
         <?php
-            if ($currentLoop <= 3)
+            if ($currentLoop <= 5)
                 echo "<meta http-equiv=\"refresh\" content=\"2\">";
         ?>
     </head>
@@ -24,10 +24,10 @@ $_SESSION["currentLoop"]=$currentLoop;
                 <td align="center"><font size="16" color="#FF0000"><b>欢迎参加Red Hat会议</b></font></td>
             </tr>
             <?php
-                if ($currentLoop <=3) {
+                if ($currentLoop <=5) {
             ?>
             <tr>
-                <td align="center"><font size="16" color="#FF0011">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(10-$currentLoop)?>次</font></td>
+                <td align="center"><font size="16" color="#FF0011">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(5-$currentLoop)?>次</font></td>
             </tr>
             <tr>
                 <td align="center"><font size="20" color="#FF1100">本次您的抽奖序号是</td>
@@ -58,7 +58,7 @@ $_SESSION["currentLoop"]=$currentLoop;
             ?>
             <tr>
                 <td align="center">
-                    <font size="20" color="#FF11FF">您总共抽了 <b><?=$currentLoop?></b> 次奖，中了 <b><?=$_SESSION["winTimes"]?></b> 次奖！</font>
+                    <font size="20" color="#FF11FF">您总共抽了 <b><?=$currentLoop-1?></b> 次奖，中了 <b><?=$_SESSION["winTimes"]?></b> 次奖！</font>
                 </td>
             </tr>            
             <?php
