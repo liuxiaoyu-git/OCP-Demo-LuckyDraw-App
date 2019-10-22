@@ -6,8 +6,6 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
     $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
 }
 $currentLoop=(int) $_SESSION["currentLoop"] + 1;
-echo "$currentLoop=";
-echo $currentLoop;
 ?>
 <html>
     <head>
