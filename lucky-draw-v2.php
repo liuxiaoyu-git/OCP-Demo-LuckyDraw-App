@@ -53,7 +53,6 @@ else
                 } else {
                     $currentLoop=$totalTime+1;
                     $_SESSION["currentLoop"]=$currentLoop; 
-				}
             ?>
             <tr>
                 <td align="center">
