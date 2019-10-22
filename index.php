@@ -3,7 +3,7 @@
     <table width="100%" height="100%">
         <tr>
             <td align="center">
-                <a href="lucky-draw-v2.php"><img src="lucky-draw.png" /></a>
+                <a href="lucky-draw-v1.php"><img src="lucky-draw.png" /></a>
             </td>
         </tr>
     </table>
