@@ -49,7 +49,6 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
             <?php
                 } else {
                     $currentLoop=$totalTime+1;
-                    $_SESSION["currentLoop"]=$currentLoop; 
             ?>
             <tr>
                 <td align="center">
@@ -58,6 +57,7 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
             </tr>            
             <?php
                 }
+		$_SESSION["currentLoop"]=$currentLoop; 
             ?>
         </table>
         </div>
