@@ -8,7 +8,7 @@ if (session_status() !== PHP_SESSION_ACTIVE) {
 }
 
 $currentLoop=(int) $_SESSION["currentLoop"] + 1;
-}
+
 ?>
 <html>
     <head>
