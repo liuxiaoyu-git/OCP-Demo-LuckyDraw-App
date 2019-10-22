@@ -3,10 +3,9 @@ $totalTime=10;
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
-    $currentLoop=1;
+    $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
 }
-else
-    $currentLoop=(int) $_SESSION["currentLoop"] + 1;
+$currentLoop=(int) $_SESSION["currentLoop"] + 1;
 ?>
 <html>
     <head>
