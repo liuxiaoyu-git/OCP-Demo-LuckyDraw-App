@@ -37,7 +37,7 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
                 </td>
             </tr>
             <tr>
-                <td align="center"><font size=\"20\" color=\"#FF1111\">
+                <td align="center"><font size="20" color="#FF0000">
                     <?php
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
                             echo "恭喜你，刚刚中奖了！</font>";
