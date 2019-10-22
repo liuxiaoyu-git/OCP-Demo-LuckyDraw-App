@@ -37,15 +37,15 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
                 </td>
             </tr>
             <tr>
-                <td align="center"><font size="20" color="#FF0000">
+                <td align="center"><font size="20" color="#FF0000"><b>
                     <?php
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
-                            echo "恭喜你，刚刚中奖了！</font>";
+                            echo "恭喜你，刚刚中奖了！";
                             $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
                         } else
-                            echo "<br><b>这没中奖，还可以再来一次！</b>";
+                            echo "这没中奖，还可以再来一次！";
                     ?>
-                </font></td>
+                </b></font></td>
             </tr>
             <?php
                 } else {
