@@ -58,7 +58,7 @@ $_SESSION["currentLoop"]=$currentLoop;
             ?>
             <tr>
                 <td align="center">
-                    <font size="20" color="#FF11FF">你总共中了 <b><?=$_SESSION["winTimes"]?></b> 次奖！</font>
+                    <font size="20" color="#FF11FF">您总共抽了 <b><?=$currentLoop?></b> 次奖，中了 <b><?=$_SESSION["winTimes"]?></b> 次奖！</font>
                 </td>
             </tr>            
             <?php
