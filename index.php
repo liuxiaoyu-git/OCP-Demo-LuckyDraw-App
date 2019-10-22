@@ -24,7 +24,7 @@
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
                             echo "<b>恭喜你，刚刚中奖了！</b>";
                         } else
-                            echo "<b><br>这没中奖，还可以再来一次！</b>";
+                            echo "<b><br>这次没中奖，可以再扫一次码,重新抽奖！</b>";
                     ?>
                 </font></td>
             </tr>
