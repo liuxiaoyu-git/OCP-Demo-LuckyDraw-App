@@ -1,6 +1,6 @@
 <?php
 
-$totalTime=10;
+$totalTime=5;
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
     $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
