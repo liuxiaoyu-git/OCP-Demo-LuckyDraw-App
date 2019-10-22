@@ -1,19 +1,17 @@
 <?php
 
+$totalTime=10;
 if (session_status() !== PHP_SESSION_ACTIVE) {
-    //echo "<br>start session...";
     session_start();
     $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
 }
-
-$currentLoop=(int) $_SESSION["currentLoop"] + 1;
-$_SESSION["currentLoop"]=$currentLoop;    
+$currentLoop=(int) $_SESSION["currentLoop"] + 1;  
 
 ?>
 <html>
     <head>
         <?php
-            if ($currentLoop <= 5)
+            if ($currentLoop <= $totalTime)
                 echo "<meta http-equiv=\"refresh\" content=\"2\">";
         ?>
     </head>
@@ -24,37 +22,34 @@ $_SESSION["currentLoop"]=$currentLoop;
                 <td align="center"><font size="16" color="#FF0000"><b>欢迎参加Red Hat会议</b></font></td>
             </tr>
             <?php
-                if ($currentLoop <=5) {
+                if ($currentLoop <=$totalTime) {
+                    $result=rand(10,99);
             ?>
             <tr>
-                <td align="center"><font size="16" color="#FF0011">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=(5-$currentLoop)?>次</font></td>
+                <td align="center"><font size="16" color="#FF0011">这是您的第<?=$currentLoop?>抽奖，还可以再抽<?=($totalTime-$currentLoop)?>次</font></td>
             </tr>
             <tr>
                 <td align="center"><font size="20" color="#FF1100">本次您的抽奖序号是</td>
             </tr>
             <tr>
                 <td align="center">
-                    <font size="20" color="#FF00FF">
-                    <?php
-                        $result=rand(10,99);
-                        echo $result;
-                    ?>
-                    </font>
+                    <font size="20" color="#FF00FF"><?=$result?></font>
                 </td>
             </tr>
             <tr>
-                <td align="center">
+                <td align="center"><font size=\"20\" color=\"#FF1111\">
                     <?php
                         if ($result==11 || $result==22 || $result==33 || $result==44 || $result==55 || $result==66 || $result==77 || $result==88 || $result==99) {
-                            echo "<font size=\"20\" color=\"#FF1111\">恭喜你，刚刚中奖了！</font>";
+                            echo "恭喜你，刚刚中奖了！</font>";
                             $_SESSION["winTimes"] = (int) $_SESSION["winTimes"] + 1;
                         } else
-                            echo "<font size=\"20\" color=\"#FF1111\"><b><br>这没中奖，还可以再来一次！</b></font>";
+                            echo "<br><b>这没中奖，还可以再来一次！</b>";
                     ?>
-                </td>
+                </font></td>
             </tr>
             <?php
                 } else {
+                    $currentLoop=$totalTime+1;
             ?>
             <tr>
                 <td align="center">
@@ -63,6 +58,7 @@ $_SESSION["currentLoop"]=$currentLoop;
             </tr>            
             <?php
                 }
+                $_SESSION["currentLoop"]=$currentLoop; 
             ?>
         </table>
         </div>
