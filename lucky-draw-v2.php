@@ -1,11 +1,12 @@
 <?php
-$totalTime=10;
 
+$totalTime=10;
 if (session_status() !== PHP_SESSION_ACTIVE) {
     session_start();
     $_SESSION["winTimes"]=(int) $_SESSION["winTimes"];
 }
 $currentLoop=(int) $_SESSION["currentLoop"] + 1;
+echo "$currentLoop=".$currentLoop;
 ?>
 <html>
     <head>
@@ -22,7 +23,6 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
             </tr>
 		<?php
 		if ($currentLoop <= $totalTime) {
-			$currentLoop=$currentLoop+1;
 			$result=rand(10,99);
 		?>
             <tr>
@@ -58,7 +58,7 @@ $currentLoop=(int) $_SESSION["currentLoop"] + 1;
             </tr>            
             <?php
                 }
-		$_SESSION["currentLoop"]=$currentLoop; 
+                $_SESSION["currentLoop"]=$currentLoop; 
             ?>
         </table>
         </div>
